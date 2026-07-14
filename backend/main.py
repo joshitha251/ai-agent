@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from dotenv import load_dotenv
 from google import genai
 import os
+from services.serper import search_businesses
+
 
 load_dotenv()
 
@@ -28,3 +30,8 @@ def test_ai():
     return {
         "response": response.text
     }
+
+@app.get("/search")
+def search(query: str):
+
+    return search_businesses(query)
