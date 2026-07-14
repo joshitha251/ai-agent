@@ -4,7 +4,9 @@ from google import genai
 import os
 from services.firecrawl_services import scrape_website
 from services.serper import search_businesses
+from agents.analysis_agent import AnalysisAgent
 
+agent = AnalysisAgent()
 
 load_dotenv()
 
@@ -41,3 +43,10 @@ def search(query: str):
 def research(url: str):
 
     return scrape_website(url)
+
+@app.post("/analyze")
+def analyze(data: dict):
+
+    return agent.analyze(
+        data["content"]
+    )
