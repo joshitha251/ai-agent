@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from dotenv import load_dotenv
 from google import genai
 import os
+from services.firecrawl_services import scrape_website
 from services.serper import search_businesses
 
 
@@ -35,3 +36,8 @@ def test_ai():
 def search(query: str):
 
     return search_businesses(query)
+
+@app.get("/research")
+def research(url: str):
+
+    return scrape_website(url)
