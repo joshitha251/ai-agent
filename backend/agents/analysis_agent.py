@@ -1,4 +1,4 @@
-from services.gemini_service import analyze_business
+from services.gemini_services import analyze_business
 
 
 class AnalysisAgent:

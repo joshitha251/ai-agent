@@ -1,15 +1,29 @@
 import os
 import json
-from dotenv import load_dotenv
-from google import genai
 
-# Load environment variables
-load_dotenv()
+# Try to load environment variables from a .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    # dotenv is optional; continue if it's not installed or .env is absent
+    pass
 
-# Initialize Gemini client
-client = genai.Client(
-    api_key=os.getenv("GEMINI_API_KEY")
-)
+# Try to import the Gemini SDK (google.genai). If it's missing, handle gracefully
+try:
+    from google import genai
+except Exception:
+    genai = None
+
+# Initialize Gemini client if possible
+client = None
+if genai is not None:
+    api_key = os.getenv("GEMINI_API_KEY")
+    if api_key:
+        try:
+            client = genai.Client(api_key=api_key)
+        except Exception:
+            client = None
 
 
 def analyze_business(content):
@@ -17,6 +31,12 @@ def analyze_business(content):
     Analyze a company's website content and identify AI automation opportunities.
     Returns a Python dictionary.
     """
+
+    if client is None:
+        return {
+            "success": False,
+            "error": "Gemini client is not configured. Install the 'google.genai' SDK and set GEMINI_API_KEY."
+        }
 
     prompt = f"""
 You are a senior AI Automation Consultant.

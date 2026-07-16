@@ -4,12 +4,16 @@ from google import genai
 import os
 from services.firecrawl_services import scrape_website
 from services.serper_services import search_businesses
+from services.gemini_services import analyze_business
 from agents.analysis_agent import AnalysisAgent
+from agents.proposal_agent import ProposalAgent
 from agents.lead_finder_agent import LeadFinderAgent
 
 load_dotenv()
 
 app = FastAPI()
+
+proposal_agent = ProposalAgent()
 
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
@@ -56,3 +60,10 @@ def analyze(data: dict):
 def run_agent(query: str):
 
     return lead_finder_agent.run(query)
+
+@app.post("/proposal")
+def proposal(data: dict):
+
+    return proposal_agent.generate(
+        data
+    )
