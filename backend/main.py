@@ -3,10 +3,9 @@ from dotenv import load_dotenv
 from google import genai
 import os
 from services.firecrawl_services import scrape_website
-from services.serper import search_businesses
+from services.serper_services import search_businesses
 from agents.analysis_agent import AnalysisAgent
-
-agent = AnalysisAgent()
+from agents.lead_finder_agent import LeadFinderAgent
 
 load_dotenv()
 
@@ -16,6 +15,8 @@ client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
+analysis_agent = AnalysisAgent()
+lead_finder_agent = LeadFinderAgent()
 
 @app.get("/")
 def home():
@@ -47,6 +48,11 @@ def research(url: str):
 @app.post("/analyze")
 def analyze(data: dict):
 
-    return agent.analyze(
+    return analysis_agent.analyze(
         data["content"]
     )
+
+@app.get("/run-agent")
+def run_agent(query: str):
+
+    return lead_finder_agent.run(query)

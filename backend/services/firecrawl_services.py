@@ -16,4 +16,6 @@ def scrape_website(url):
         formats=["markdown"]
     )
 
-    return result
+    return {
+        "markdown": result.markdown
+    }
