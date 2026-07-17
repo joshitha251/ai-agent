@@ -1,0 +1,63 @@
+{
+    "company_name": "PrimeAgents",
+
+    "tagline": "Building Modern AI Solutions for Modern Business Problems.",
+
+    "mission": "We build intelligent AI agents that eliminate repetitive work, automate business operations, and help companies save time, reduce costs, and grow faster.",
+
+    "website": "",
+
+    "email": "",
+
+    "timezone": "IST",
+
+    "target_market": {
+        "countries": [
+            "United States",
+            "Canada",
+            "United Kingdom",
+            "Australia",
+            "New Zealand",
+            "Singapore"
+        ],
+
+        "business_types": [
+            "Healthcare",
+            "Real Estate",
+            "Law Firms",
+            "Marketing Agencies",
+            "Accounting Firms",
+            "Construction",
+            "Home Services",
+            "E-commerce",
+            "Education",
+            "Recruitment",
+            "Logistics",
+            "Finance",
+            "Insurance",
+            "Automotive",
+            "Hospitality",
+            "Restaurants",
+            "Manufacturing",
+            "Any business with repetitive manual work"
+        ]
+    },
+
+    "ideal_clients": [
+        "Receive many phone calls",
+        "Generate large numbers of leads",
+        "Spend hours on repetitive tasks",
+        "Have employees doing manual data entry",
+        "Need faster customer support",
+        "Need automation instead of hiring more staff"
+    ],
+
+    "voice": "Friendly, professional, consultative, persuasive",
+
+    "core_values": [
+        "Automation before manpower",
+        "Solve real business problems",
+        "Deliver measurable ROI",
+        "Build long-term client relationships"
+    ]
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "name": "AI Voice Receptionist",
+    "category": "Voice AI",
+    "description": "Answers incoming phone calls 24/7, qualifies customers, answers FAQs and books appointments.",
+    "ideal_for": [
+      "Healthcare",
+      "Law Firms",
+      "Real Estate",
+      "Home Services",
+      "Automotive",
+      "Restaurants"
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "AI Lead Qualification Agent",
+    "category": "Sales Automation",
+    "description": "Qualifies leads automatically, asks discovery questions and routes hot leads to your sales team.",
+    "ideal_for": [
+      "Marketing Agencies",
+      "Construction",
+      "Software Companies",
+      "Recruitment",
+      "Real Estate"
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "AI Customer Support Agent",
+    "category": "Customer Service",
+    "description": "Answers customer questions using your knowledge base across website, WhatsApp and email.",
+    "ideal_for": [
+      "E-commerce",
+      "Healthcare",
+      "Education",
+      "Hospitality"
+    ]
+  },
+
+  {
+    "id": 4,
+    "name": "AI Appointment Booking Agent",
+    "category": "Scheduling",
+    "description": "Books appointments, manages calendars and sends reminders automatically.",
+    "ideal_for": [
+      "Clinics",
+      "Salons",
+      "Consultants",
+      "Law Firms"
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "AI CRM Automation Agent",
+    "category": "Operations",
+    "description": "Updates CRM records, follows up with leads and keeps customer data synchronized.",
+    "ideal_for": [
+      "Sales Teams",
+      "Marketing Agencies",
+      "Real Estate"
+    ]
+  },
+
+  {
+    "id": 6,
+    "name": "AI Reporting & Analytics Agent",
+    "category": "Analytics",
+    "description": "Creates automated daily, weekly and monthly reports from multiple business systems.",
+    "ideal_for": [
+      "Marketing Agencies",
+      "Accounting",
+      "Finance"
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "AI Internal Knowledge Agent",
+    "category": "Knowledge Management",
+    "description": "Acts as an internal company assistant trained on SOPs, documents and company knowledge.",
+    "ideal_for": [
+      "Growing Companies",
+      "Remote Teams",
+      "Customer Support Teams"
+    ]
+  },
+
+  {
+    "id": 8,
+    "name": "AI Email & Follow-up Agent",
+    "category": "Communication",
+    "description": "Writes personalized emails, follows up automatically and manages customer conversations.",
+    "ideal_for": [
+      "Sales Teams",
+      "Consultants",
+      "Recruitment"
+    ]
+  },
+
+  {
+    "id": 9,
+    "name": "AI Document Processing Agent",
+    "category": "Document Automation",
+    "description": "Extracts information from invoices, forms, PDFs and contracts automatically.",
+    "ideal_for": [
+      "Healthcare",
+      "Finance",
+      "Insurance",
+      "Legal"
+    ]
+  },
+
+  {
+    "id": 10,
+    "name": "Custom AI Automation Solution",
+    "category": "Custom Development",
+    "description": "Tailor-made AI workflow built specifically around the client's business process.",
+    "ideal_for": [
+      "Any Business"
+    ]
+  }
+]

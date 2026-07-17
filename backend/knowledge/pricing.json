@@ -1,0 +1,46 @@
+{
+  "currency": "USD",
+
+  "minimum_setup_fee": 1600,
+
+  "pricing_model": {
+    "setup_fee": {
+      "minimum": 1600,
+      "maximum": 15000
+    },
+
+    "monthly_maintenance": {
+      "minimum": 200,
+      "maximum": 3000
+    }
+  },
+
+  "pricing_rules": [
+    "Never recommend a setup fee below $1600.",
+    "Higher complexity means higher setup fee.",
+    "Monthly pricing depends on AI model usage, integrations and support.",
+    "Enterprise projects should receive custom pricing."
+  ],
+
+  "complexity_levels": {
+    "Basic": {
+      "setup": "$1600-$2500",
+      "monthly": "$200-$400"
+    },
+
+    "Standard": {
+      "setup": "$2500-$5000",
+      "monthly": "$400-$800"
+    },
+
+    "Advanced": {
+      "setup": "$5000-$10000",
+      "monthly": "$800-$1500"
+    },
+
+    "Enterprise": {
+      "setup": "$10000+",
+      "monthly": "$1500+"
+    }
+  }
+}

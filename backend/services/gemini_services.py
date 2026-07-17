@@ -1,6 +1,25 @@
 import os
 import json
+from knowledge.loader import (
+    company,
+    services,
+    pricing,
+    prompts
+)
 
+prompt = f"""
+{prompts["system_prompt"]}
+
+Company:
+{company}
+
+Services:
+{services}
+
+Pricing:
+{pricing}
+
+"""
 # Try to load environment variables from a .env file if python-dotenv is available
 try:
     from dotenv import load_dotenv
