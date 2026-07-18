@@ -1,5 +1,5 @@
 from services.gemini_services import client
-
+from knowledge.loader import company
 
 class ProposalAgent:
 

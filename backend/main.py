@@ -8,6 +8,10 @@ from services.gemini_services import analyze_business
 from agents.analysis_agent import AnalysisAgent
 from agents.proposal_agent import ProposalAgent
 from agents.lead_finder_agent import LeadFinderAgent
+from database.database import Base, engine
+from database.models import Lead
+
+Base.metadata.create_all(bind=engine)
 
 load_dotenv()
 
@@ -67,3 +71,10 @@ def proposal(data: dict):
     return proposal_agent.generate(
         data
     )
+
+@app.get("/health")
+def health():
+    return {
+        "status": "running",
+        "database": "connected"
+    }
